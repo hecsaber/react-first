@@ -29,7 +29,7 @@ function App() {
   const onSubmit = (event) => {
 
     event.preventDefault();
-    fetch("/api/users/sign_in", {
+    fetch("/users/sign_in", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -54,7 +54,7 @@ function App() {
   const [authorize, setAuthorize] = useState();
 
   const onLogin = (event) => {
-    fetch("/api/rest-area", {
+    fetch("/rest-area", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -71,13 +71,13 @@ function App() {
     ))
   
   useEffect(() => {
-    fetch("/api/member-data", {
+    fetch("/member-data", {
       method: "GET"
     })
       .then(response => response.json())
       .then(result => setMembers(result))
 
-    fetch("/api/articles", {
+    fetch("/articles", {
       method: "GET"
     })
       .then(response => response.json())
@@ -92,7 +92,7 @@ function App() {
   );
 
   const signOut = (event) => {
-    fetch("/api/users/sign_out", {
+    fetch("/users/sign_out", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
