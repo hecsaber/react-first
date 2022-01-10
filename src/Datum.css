@@ -1,0 +1,19 @@
+.button-holder {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.button-holder button {
+  border: 0;
+  box-shadow: 0;
+  width: 100px;
+  height: 100px;
+  transition: background-color 250ms ease-in;
+}
+
+.active-button {
+  background-color: lightblue;
+}
